@@ -1,0 +1,4 @@
+{
+  "presets" : ["@babel/preset-env"]
+}
+//when bable loads up, it will check presets, and will load babel-preset-env

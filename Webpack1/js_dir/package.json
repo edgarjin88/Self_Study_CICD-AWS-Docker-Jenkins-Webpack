@@ -1,0 +1,21 @@
+{
+  "name": "js_dir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "style-loader": "^1.1.3",
+    "webpack": "^2.2.0-rc.0"
+  },
+  "dependencies": {}
+}
