@@ -7,7 +7,8 @@ const config = {
   entry: './src/index.js', //relative path
   output: {
     path: path.resolve(__dirname, 'build'), //absolute path. resolve would take care for Win, Mac
-    filename: 'bundle.js' //conventional name. 
+    filename: 'bundle.js', //conventional name. ,
+    publicPath: 'build/' // url-loader would look at this folder for public output path. 
   },
   module:{
     rules: [
@@ -22,6 +23,16 @@ const config = {
         loader: 'css-loader', // loader =preprocessing, plugin = a bit outside of wepack pipeline
       }),
       test: /\.css$/
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        use:[
+          {
+            loader: 'url-loader',
+            options: {limit: 40000}
+          },
+          'image-webpack-loader'
+        ] // in an array, order matters. 
       }
     ]
   },
