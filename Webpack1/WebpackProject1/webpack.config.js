@@ -38,6 +38,9 @@ module.exports = {
 
     new HtmlwebpackPlugin({
       template:'src/index.html' //basic model(template) of html. 
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) // importing .env as window.process.env.NODE_ENV. What about the security issue?
     })
 
   ]
