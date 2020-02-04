@@ -18,6 +18,7 @@ button.innerText = 'Click me';
 button.onclick = () => {
   // global variable. part of es15. Only calling a single module. 
   System.import('./image_viewer.js').then(module =>{
+    //code splitting here
     module.default();
   })
 }
